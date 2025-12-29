@@ -78,14 +78,14 @@ const Topnav = () => {
           </a>
         </div>
       </div>
-      <nav className="bg-secondary flex w-full flex-row border-y border-white/10 px-3 py-1 gap-7">
-        <div className="left-nav flex flex-row gap-5 items-center">
+      <nav className="bg-secondary flex w-full flex-row gap-7 border-y border-white/10 px-3 py-1">
+        <div className="left-nav flex flex-row items-center gap-4">
           <a role="button" href="">
             <Image
               src="/00_Nav/home.png"
               width={100}
               height={100}
-              className="w-5.5"
+              className="w-7"
               alt="Nav Country"
             />
           </a>
@@ -94,7 +94,7 @@ const Topnav = () => {
               src="/00_Nav/si.png"
               width={100}
               height={100}
-              className="w-4"
+              className="w-5"
               alt="Nav Country"
             />
           </a>
@@ -103,7 +103,7 @@ const Topnav = () => {
               src="/00_Nav/search.png"
               width={100}
               height={100}
-              className="w-4.5"
+              className="w-7"
               alt="Nav Country"
             />
           </a>
@@ -119,6 +119,19 @@ const Topnav = () => {
               </a>
             </div>
           ))}
+        </div>
+
+        <div className="mx-auto flex h-full max-h-13 min-h-11.5  flex-row items-center justify-center gap-2 ">
+          <div className="flex w-full cursor-grab px-2 text-nowrap">
+            <a href={process.env.NEXT_PUBLIC_AFFLINK}>
+              <span className="text-[16px] font-bold">Promotion</span>
+            </a>
+          </div>
+          <div className="flex w-full cursor-grab px-2 text-nowrap">
+            <a href={process.env.NEXT_PUBLIC_AFFLINK}>
+              <span className="text-[16px] font-bold">VIP</span>
+            </a>
+          </div>
         </div>
       </nav>
     </header>

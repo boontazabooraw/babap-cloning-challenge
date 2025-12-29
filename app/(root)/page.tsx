@@ -1,4 +1,5 @@
 import Carousel from "../components/Carousel";
+import LoopingMarquee from "../components/LoopingMarquee";
 import Topnav from "../components/Topnav";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Topnav />
       <Carousel />
+      <LoopingMarquee />
     </div>
   );
 }

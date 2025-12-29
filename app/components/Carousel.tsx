@@ -42,15 +42,17 @@ const Carousel = () => {
       <Slider {...settings}>
         {imageFiles.map((imij) => (
           <div key={imij} className="h-85 w-screen">
-            <Image
-              src={"/01_Carousel/" + imij}
-              width={1920}
-              height={1000}
-              quality={100}
-              style={{ objectFit: "cover" }}
-              className="w-full"
-              alt="Nav Country"
-            />
+            <a href={process.env.NEXT_PUBLIC_AFFLINK}>
+              <Image
+                src={"/01_Carousel/" + imij}
+                width={1920}
+                height={1000}
+                quality={100}
+                style={{ objectFit: "cover" }}
+                className="w-full"
+                alt="Nav Country"
+              />
+            </a>
           </div>
         ))}
       </Slider>
