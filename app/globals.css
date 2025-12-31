@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --foreground: #ffffff;
   --background: #1d2125;
@@ -36,4 +37,22 @@ body {
 
 ::-webkit-scrollbar {
   display: none
+}
+
+.h1 {
+  font-family: var(--font-roboto);
+}
+
+.live-wins {
+  animation: iskrol 20s infinite linear;
+}
+
+@keyframes iskrol {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
 }
