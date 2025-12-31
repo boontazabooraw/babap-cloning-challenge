@@ -40,7 +40,7 @@ body {
 }
 
 .live-wins {
-  animation: iskrol 20s infinite linear;
+  animation: iskrol 60s infinite linear;
 }
 
 @keyframes iskrol {

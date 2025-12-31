@@ -11,12 +11,14 @@ export default function Home() {
   return (
     <div className="pt-30">
       <Carousel />
-      <LoopingMarquee />
-      <Triflex />
-      <TopLiveGames />
-      <TopCrashGames />
-      <TopSlotGames />
-      <TopTableGames />
+      <div className="2xl:px-125">
+        <LoopingMarquee />
+        <Triflex />
+        <TopLiveGames />
+        <TopCrashGames />
+        <TopSlotGames />
+        <TopTableGames />
+      </div>
       <Footer />
     </div>
   );

@@ -19,7 +19,7 @@ const navLinks: string[] = [
 
 const Topnav = () => {
   return (
-    <header className="fixed z-50 w-full mb-50 bg-background">
+    <header className="bg-background fixed z-50 mb-50 w-full">
       <div className="topside mx-auto flex w-full max-w-400 items-center justify-between px-2 py-4">
         <div className="logo-left">
           <a href={process.env.NEXT_PUBLIC_AFFLINK}>
@@ -65,7 +65,11 @@ const Topnav = () => {
               <span className="text-[14px]">▼</span>
             </div>
           </a>
-          <a role="button" href={process.env.NEXT_PUBLIC_AFFLINK}>
+          <a
+            role="button"
+            href={process.env.NEXT_PUBLIC_AFFLINK}
+            className="md:hidden"
+          >
             <div className="bg-secondary flex h-full w-12 items-center justify-center rounded">
               <Image
                 src="/00_Nav/imgi_3_menu.png"
@@ -78,8 +82,8 @@ const Topnav = () => {
           </a>
         </div>
       </div>
-      <nav className="bg-secondary flex w-full flex-row gap-7 border-y border-white/10 px-3 py-1">
-        <div className="left-nav flex flex-row items-center gap-4">
+      <nav className="bg-secondary flex w-full flex-row gap-7 border-y border-white/10 px-3 py-1 2xl:px-125">
+        <div className="left-nav flex flex-row items-center gap-4 md:hidden">
           <a role="button" href="">
             <Image
               src="/00_Nav/home.png"
@@ -108,11 +112,11 @@ const Topnav = () => {
             />
           </a>
         </div>
-        <div className="mx-auto flex h-full max-h-13 min-h-11.5 w-full max-w-400 flex-row items-center justify-center gap-2 overflow-y-auto">
+        <div className="mx-auto flex h-full max-h-13 min-h-11.5 w-full flex-row items-center justify-center gap-2 overflow-y-auto lg:max-w-400 2xl:gap-5 2xl:px-50">
           {navLinks.map((rinku) => (
             <div
               key={rinku}
-              className="flex w-full cursor-grab px-2 text-nowrap"
+              className="flex w-full cursor-grab px-2 md:px-0 text-nowrap"
             >
               <a href={process.env.NEXT_PUBLIC_AFFLINK}>
                 <span className="text-[16px] font-bold">{rinku}</span>
@@ -121,7 +125,7 @@ const Topnav = () => {
           ))}
         </div>
 
-        <div className="mx-auto flex h-full max-h-13 min-h-11.5  flex-row items-center justify-center gap-2 ">
+        <div className="mx-auto flex h-full max-h-13 min-h-11.5 flex-row items-center justify-center gap-2 md:hidden">
           <div className="flex w-full cursor-grab px-2 text-nowrap">
             <a href={process.env.NEXT_PUBLIC_AFFLINK}>
               <span className="text-[16px] font-bold">Promotion</span>

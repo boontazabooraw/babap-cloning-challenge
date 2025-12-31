@@ -38,10 +38,10 @@ const Carousel = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full 2xl:px-100">
       <Slider {...settings}>
         {imageFiles.map((imij) => (
-          <div key={imij} className="h-85 w-screen">
+          <div key={imij} className="h-100 md:h-80 xl:h-80 lg:h-60">
             <a href={process.env.NEXT_PUBLIC_AFFLINK}>
               <Image
                 src={"/01_Carousel/" + imij}

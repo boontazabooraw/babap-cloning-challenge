@@ -33,24 +33,26 @@ const LiveWinsMarquee = () => {
   return (
     <>
       <div className="live-wins absolute flex w-full flex-col gap-5 px-5 text-nowrap">
-        <div className="h-15 rounded-full bg-amber-100 text-center text-black">
-          Card 1
-        </div>
-        <div className="h-15 rounded-full bg-amber-100 text-center text-black">
-          Card 2
-        </div>
-        <div className="h-15 rounded-full bg-amber-100 text-center text-black">
-          Card 3
-        </div>
-        <div className="h-15 rounded-full bg-amber-100 text-center text-black">
-          Card 4
-        </div>
-        <div className="h-15 rounded-full bg-amber-100 text-center text-black">
-          Card 5
-        </div>
-        <div className="h-15 rounded-full bg-amber-100 text-center text-black">
-          Card 6
-        </div>
+        {winners.map((winner) => (
+          <a key={winner.id} href={process.env.NEXT_PUBLIC_AFFLINK}>
+            <div
+              className={`flex justify-between h-12 items-center rounded-full p-2 text-center text-white ${winner.id % 2 === 0 ? "bg-[#282E33]" : "bg-[#161616]"}`}
+            >
+              <div className="left-side flex items-center gap-2">
+                <Image
+                  src={"/03_TopTopLiveGames/" + winner.game}
+                  height={400}
+                  width={400}
+                  alt={winner.name}
+                  className="h-10 w-10 rounded-full"
+                  quality={100}
+                />
+                <span>{winner.name}</span>
+              </div>
+              <span className="font-bold text-amber-300 p-4">INR {winner.winnings}</span>
+            </div>
+          </a>
+        ))}
       </div>
     </>
   );

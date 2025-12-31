@@ -6,7 +6,7 @@ import LiveWinsMarquee from "./LiveWinsMarquee";
 const Triflex = () => {
   return (
     <section className="flex h-fit w-full justify-center gap-4 px-2">
-      <div className="relative min-h-70 w-full max-w-125 rounded-xl">
+      <div className="relative w-full max-w-125 rounded-xl md:h-60 lg:h-50 xl:h-75">
         <a role="button" href={process.env.NEXT_PUBLIC_AFFLINK}>
           <div className="absolute inset-0 z-20 h-full w-full bg-radial from-transparent to-black opacity-20"></div>
           <div className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 transform">
@@ -31,7 +31,7 @@ const Triflex = () => {
         </a>
       </div>
 
-      <div className="relative min-h-70 w-full max-w-125 rounded-xl">
+      <div className="relative w-full max-w-125 rounded-xl lg:h-50 xl:h-75">
         <a href={process.env.NEXT_PUBLIC_AFFLINK}>
           <div className="absolute bottom-5 left-0 z-20 px-5">
             <h1 className="text-xl font-bold">JeetWin Exclusive Live Games</h1>
@@ -47,7 +47,7 @@ const Triflex = () => {
         </a>
       </div>
 
-      <div className="flex min-h-70 w-full max-w-125 flex-col overflow-y-hidden rounded-xl border border-amber-300">
+      <div className="hidden w-full max-w-125 flex-col overflow-y-hidden rounded-xl border border-amber-300 lg:flex lg:h-50 xl:h-75">
         <div className="bg-background z-10 flex flex-row items-center gap-2 px-3 pt-2 pb-1">
           <h1 className="text-xl font-bold">Live Wins</h1>
           <div className="h-2.5 w-2.5 animate-pulse rounded-full bg-yellow-400"></div>

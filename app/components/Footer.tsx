@@ -30,7 +30,7 @@ const licences: ImagePaths[] = [
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary mt-20 h-full w-full px-2 py-2.5 lg:pt-12.5">
+    <footer className="2xl:px-130 bg-secondary mt-20 h-full w-full px-2 py-2.5 lg:pt-12.5">
       <div className="flex w-full flex-row">
         <div className="flex flex-col justify-between">
           <div className="max-w-[90%]">
@@ -116,29 +116,30 @@ const Footer = () => {
               <h2 className="text-xl font-semibold">Licenses</h2>
               <div className="flex flex-col gap-2">
                 {licences.map((license) => (
-                  <Image
-                    key={license.filename}
-                    src={"/08_Licenses/" + license.filename}
-                    width={60}
-                    height={60}
-                    alt="License"
-                  />
+                  <a key={license.filename} href="">
+                    <Image
+                      src={"/08_Licenses/" + license.filename}
+                      width={60}
+                      height={60}
+                      alt="License"
+                    />
+                  </a>
                 ))}
               </div>
             </div>
           </div>
           <div className="socials-wrapper w-full pt-10">
             <h2 className="font-semibold">Payment Methods</h2>
-            <div className="flex w-full gap-2 flex-wrap">
+            <div className="flex w-full flex-wrap gap-2">
               {paymentMethods.map((pmethod) => (
-                <Image
-                  key={pmethod.filename}
-                  src={"/07_PaymentMethods/" + pmethod.filename}
-                  width={80}
-                  height={80}
-                  className=""
-                  alt="Payment Method"
-                />
+                <a key={pmethod.filename} href={process.env.NEXT_PUBLIC_AFLINK}>
+                  <Image
+                    src={"/07_PaymentMethods/" + pmethod.filename}
+                    width={80}
+                    height={80}
+                    alt="Payment Method"
+                  />
+                </a>
               ))}
             </div>
           </div>
