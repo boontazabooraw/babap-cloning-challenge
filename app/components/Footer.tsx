@@ -30,8 +30,8 @@ const licences: ImagePaths[] = [
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary w-full h-full px-2 py-2.5 lg:py-12.5">
-      <div className="flex w-full">
+    <footer className="bg-secondary mt-20 h-full w-full px-2 py-2.5 lg:pt-12.5">
+      <div className="flex w-full flex-row">
         <div className="flex flex-col justify-between">
           <div className="max-w-[90%]">
             <h2 className="text-xl font-semibold">About JeetWin</h2>
@@ -112,7 +112,7 @@ const Footer = () => {
                 </span>
               </a>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               <h2 className="text-xl font-semibold">Licenses</h2>
               <div className="flex flex-col gap-2">
                 {licences.map((license) => (
@@ -127,15 +127,16 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="socials-wrapper w-full mt-10">
+          <div className="socials-wrapper w-full pt-10">
             <h2 className="font-semibold">Payment Methods</h2>
-            <div className="flex w-full gap-2">
+            <div className="flex w-full gap-2 flex-wrap">
               {paymentMethods.map((pmethod) => (
                 <Image
                   key={pmethod.filename}
                   src={"/07_PaymentMethods/" + pmethod.filename}
                   width={80}
                   height={80}
+                  className=""
                   alt="Payment Method"
                 />
               ))}
@@ -143,8 +144,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center p-5">
-        <h3 className=" font-semibold">Copyright 2025 | JeetWin | All Right Reserved</h3>
+      <div className="flex items-center justify-center p-5">
+        <h3 className="font-semibold">
+          Copyright 2025 | JeetWin | All Right Reserved
+        </h3>
       </div>
     </footer>
   );
