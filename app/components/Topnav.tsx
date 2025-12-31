@@ -19,7 +19,7 @@ const navLinks: string[] = [
 
 const Topnav = () => {
   return (
-    <header className="sticky z-50 w-full">
+    <header className="fixed z-50 w-full mb-50 bg-background">
       <div className="topside mx-auto flex w-full max-w-400 items-center justify-between px-2 py-4">
         <div className="logo-left">
           <a href={process.env.NEXT_PUBLIC_AFFLINK}>
