@@ -83,7 +83,7 @@ const Topnav = () => {
         </div>
       </div>
       <nav className="bg-secondary flex w-full flex-row gap-7 border-y border-white/10 px-3 py-1 2xl:px-125">
-        <div className="left-nav flex flex-row items-center gap-4 md:hidden">
+        <div className="left-nav lg:flex flex-row items-center gap-4 hidden">
           <a role="button" href="">
             <Image
               src="/00_Nav/home.png"
@@ -125,7 +125,7 @@ const Topnav = () => {
           ))}
         </div>
 
-        <div className="mx-auto flex h-full max-h-13 min-h-11.5 flex-row items-center justify-center gap-2 md:hidden">
+        <div className="mx-auto lg:flex h-full max-h-13 min-h-11.5 flex-row items-center justify-center gap-2 hidden">
           <div className="flex w-full cursor-grab px-2 text-nowrap">
             <a href={process.env.NEXT_PUBLIC_AFFLINK}>
               <span className="text-[16px] font-bold">Promotion</span>
